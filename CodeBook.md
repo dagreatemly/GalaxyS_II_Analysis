@@ -28,39 +28,39 @@ feature (33)
 
 -The observations in the Samsung study consisted data on 33 measures, which are listed in the "features_info.txt" file provided.  Even though at first glance there seem to be only 17 features or measures, 8 of these features are actually dealt with as three separate features, one for each axis in 3D. Therefore there are 16 more features to add to the 17, and hence the study measured 33 signals in each observation.
 
-	fBodyAcc ()-X           
-	fBodyAcc ()-Y          
- 	fBodyAcc ()-Z           		
- 	fBodyAccJerk ()-X      
-	fBodyAccJerk ()-Y       
-	fBodyAccJerk ()-Z      
-	fBodyAccMag ()          
-	fBodyBodyAccJerkMag () 
-	fBodyBodyGyroJerkMag () 
-	fBodyBodyGyroMag ()    
-	fBodyGyro ()-X          
-	fBodyGyro ()-Y         
-	fBodyGyro ()-Z          
-	tBodyAcc ()-X          
-	tBodyAcc ()-Y           
-	tBodyAcc ()-Z          
-	tBodyAccJerk ()-X       
-	tBodyAccJerk ()-Y      
-	tBodyAccJerk ()-Z      
-	tBodyAccJerkMag ()     
-	tBodyAccMag ()          
-	tBodyGyro ()-X         
-	tBodyGyro ()-Y          
-	tBodyGyro ()-Z         
-	tBodyGyroJerk ()-X      
-	tBodyGyroJerk ()-Y     
-	tBodyGyroJerk ()-Z      
-	tBodyGyroJerkMag ()    
-	tBodyGyroMag ()         
-	tGravityAcc ()-X       
-	tGravityAcc ()-Y        
-	tGravityAcc ()-Z       
-	tGravityAccMag ()
+		fBodyAcc ()-X           
+		fBodyAcc ()-Y          
+	 	fBodyAcc ()-Z           		
+	 	fBodyAccJerk ()-X      
+		fBodyAccJerk ()-Y       
+		fBodyAccJerk ()-Z      
+		fBodyAccMag ()          
+		fBodyBodyAccJerkMag () 
+		fBodyBodyGyroJerkMag () 
+		fBodyBodyGyroMag ()    
+		fBodyGyro ()-X          
+		fBodyGyro ()-Y         
+		fBodyGyro ()-Z          
+		tBodyAcc ()-X          
+		tBodyAcc ()-Y           
+		tBodyAcc ()-Z          
+		tBodyAccJerk ()-X       
+		tBodyAccJerk ()-Y      
+		tBodyAccJerk ()-Z      
+		tBodyAccJerkMag ()     
+		tBodyAccMag ()          
+		tBodyGyro ()-X         
+		tBodyGyro ()-Y          
+		tBodyGyro ()-Z         
+		tBodyGyroJerk ()-X      
+		tBodyGyroJerk ()-Y     
+		tBodyGyroJerk ()-Z      
+		tBodyGyroJerkMag ()    
+		tBodyGyroMag ()         
+		tGravityAcc ()-X       
+		tGravityAcc ()-Y        
+		tGravityAcc ()-Z       
+		tGravityAccMag ()
 
 value     
 
