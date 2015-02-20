@@ -72,4 +72,4 @@ map2 <- function(i) {
 ssep$feature <- lapply(as.numeric(ssep$feature), map2)
 ssep <- tbl_df(ssep)
 ssep$feature <- as.character(ssep$feature)
-write.table(ssep, file = "./tidy.txt", row.names=FALSE)
+write.table(ssep, file = "~/GitHub/GalaxyS_II_Analysis/tidy.txt", row.names=FALSE)
