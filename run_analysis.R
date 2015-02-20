@@ -62,10 +62,10 @@ mat <- tbl_df(data.frame(matrix(1:561, nrow=1, ncol=561)))
 colnames(mat) <- features
 mat <- select(mat, contains("mean()"))
 f <- colnames(mat)
-f <- strsplit(f, "-mean")
-f <- lapply(f, function(x) {
-     x <- x[[1]]
-})
+f <- lapply(strsplit(f, "-mean()"), function(x) {
+  paste(x[[1]],x[[2]])
+  })
+
 map2 <- function(i) {
      i <- f[[i]]
 }
