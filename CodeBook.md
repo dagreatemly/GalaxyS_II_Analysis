@@ -4,67 +4,67 @@ PART I: Variables & Units in Output Dataset
 
 subject (30)	
 	
-	Each number identifies a unique subject in the Samsung study.
+-Each number identifies a unique subject in the Samsung study.
 
 activity (6)
 
-	Each observation in the study was taken (and data gathered) when the observed subject was engaged in one of 		six activities:
+-Each observation in the study was taken (and data gathered) when the subject was engaged in one of 6 activities:
 
-        	WALKING
-        	WALKING_UPSTAIRS
-     		WALKING_DOWNSTAIRS
-        	SITTING
-        	STANDING
-        	LAYING
+       	WALKING
+       	WALKING_UPSTAIRS
+     	WALKING_DOWNSTAIRS
+       	SITTING
+       	STANDING
+        LAYING
 
 stat (2)
 
-	The output dataset reflects the project's directive to extract the (1) means and (2) means of standard 			deviations of multiple observations taken with respect to 33 different metrics, given a subject and an 			activity.  Therefore, this column specifies whether the value is a mean of the outcomes, or of the 			standard deviation associated with that particular observation.  "std" denotes the latter value.
+-The output dataset reflects the project's directive to extract the (1) means and (2) means of standard deviations of multiple observations taken with respect to 33 different metrics, given a subject and an activity.  Therefore, this column specifies whether the value is a mean of the outcomes, or of the standard deviation associated with that particular observation.  "std" denotes the latter value.
 
-        	mean
-        	std
+       	mean
+        std
         
 feature (33)
 
-	The observations in the Samsung study consisted data on 33 measures, which are listed in the 				"features_info.txt" file provided.  Even though at first glance there seem to be only 17 features or 			measures, 8 of these features are actually dealt with as three separate features, one for each axis in 3D. 	Therefore there are 16 more features to add to the 17, and hence the study measured 33 signals in each 				observation.
-	
-		fBodyAcc ()-X           
-		fBodyAcc ()-Y          
-	 	fBodyAcc ()-Z           
-		fBodyAccJerk ()-X      
-	 	fBodyAccJerk ()-Y       
-		fBodyAccJerk ()-Z      
-	 	fBodyAccMag ()          
-		fBodyBodyAccJerkMag () 
-	 	fBodyBodyGyroJerkMag () 
-		fBodyBodyGyroMag ()    
-	 	fBodyGyro ()-X          
-		fBodyGyro ()-Y         
-	 	fBodyGyro ()-Z          
-		tBodyAcc ()-X          
-	 	tBodyAcc ()-Y           
-		tBodyAcc ()-Z          
-	 	tBodyAccJerk ()-X       
-		tBodyAccJerk ()-Y      
-	 	tBodyAccJerk ()-Z      
-	 	tBodyAccJerkMag ()     
-	 	tBodyAccMag ()          
-		tBodyGyro ()-X         
-	 	tBodyGyro ()-Y          
-		tBodyGyro ()-Z         
-	 	tBodyGyroJerk ()-X      
-		tBodyGyroJerk ()-Y     
-	 	tBodyGyroJerk ()-Z      
-		tBodyGyroJerkMag ()    
-	 	tBodyGyroMag ()         
-		tGravityAcc ()-X       
-	 	tGravityAcc ()-Y        
-		tGravityAcc ()-Z       
-	 	tGravityAccMag ()
+-The observations in the Samsung study consisted data on 33 measures, which are listed in the "features_info.txt" file provided.  Even though at first glance there seem to be only 17 features or measures, 8 of these features are actually dealt with as three separate features, one for each axis in 3D. Therefore there are 16 more features to add to the 17, and hence the study measured 33 signals in each observation.
+
+	fBodyAcc ()-X           
+	fBodyAcc ()-Y          
+ 	fBodyAcc ()-Z           		
+ 	fBodyAccJerk ()-X      
+	fBodyAccJerk ()-Y       
+	fBodyAccJerk ()-Z      
+	fBodyAccMag ()          
+	fBodyBodyAccJerkMag () 
+	fBodyBodyGyroJerkMag () 
+	fBodyBodyGyroMag ()    
+	fBodyGyro ()-X          
+	fBodyGyro ()-Y         
+	fBodyGyro ()-Z          
+	tBodyAcc ()-X          
+	tBodyAcc ()-Y           
+	tBodyAcc ()-Z          
+	tBodyAccJerk ()-X       
+	tBodyAccJerk ()-Y      
+	tBodyAccJerk ()-Z      
+	tBodyAccJerkMag ()     
+	tBodyAccMag ()          
+	tBodyGyro ()-X         
+	tBodyGyro ()-Y          
+	tBodyGyro ()-Z         
+	tBodyGyroJerk ()-X      
+	tBodyGyroJerk ()-Y     
+	tBodyGyroJerk ()-Z      
+	tBodyGyroJerkMag ()    
+	tBodyGyroMag ()         
+	tGravityAcc ()-X       
+	tGravityAcc ()-Y        
+	tGravityAcc ()-Z       
+	tGravityAccMag ()
 
 value     
 
-	This column give the mean of the measures identified in the previous column given a subject and activity, or 		of the standard deviations thereof.  
+-This column gives the mean of the measures identified in the previous column given a subject and activity, or of the standard deviations thereof.  
     
 -----------------------------------------------------------
 PART 2: STUDY DESIGN
