@@ -7,17 +7,9 @@ The CodeBook describes how the "run_analysis.R" script produces at some point a 
 
 sgat <- gather(s, stat_feature, value, -subject, -activity)
 
-head(sgat) shows the following:
+sgat has the following variables: subject, activity, stat_feature, and value.
 
-  subject activity stat_feature             value
-1       1  WALKING       mean_1 0.277330758736842
-2       2  WALKING       mean_1 0.276426586440678
-3       3  WALKING       mean_1 0.275567462068966
-4       4  WALKING       mean_1 0.278582015166667
-5       5  WALKING       mean_1     0.27784234625
-6       6  WALKING       mean_1 0.283658868070175
-
-This improves on the original, but the "stat_feature" variable is still in violation of the prohibition against having two variables represented in a single column.
+This improves on the original, but the "stat_feature" variable is still in violation of the prohibition against having two variables represented in a single column.  What we want are two separate columns, one for the signal being observed, and one for the statistic to derive from the resultant data.
 
 Call the separate() function: ssep <- separate(sgat, stat_feature, c("stat", "feature")).
 
