@@ -1,13 +1,12 @@
 library(dplyr)
 library(tidyr)
 
-map <- function(i) {
-     i <- activity[i]
-}
 
 activity_labels <- read.table(file("./UCI HAR Dataset/activity_labels.txt"))
 activity <- as.vector(activity_labels[,2])
-
+map <- function(i) {
+     i <- activity[i]
+}
 
 features <- read.table(file("./UCI HAR Dataset/features.txt"), stringsAsFactors = FALSE)[,2]
 trainingSet <- read.table(file("./UCI HAR Dataset/train/X_train.txt"), stringsAsFactors = FALSE)
@@ -51,5 +50,26 @@ s <- t(s)
 
 s[,"activity"] <- sapply(s[,"activity"], map)
 rownames(s) <- NULL
+s <- tbl_df(data.frame(s))
+y <- select(s, mean_ = contains("mean"))
+z <- select(s, std_ = contains("std"))
+x <- select(s, 1:2)
+s <- cbind(x, y, z)
+sgat <- gather(s, stat_feature, value, -subject, -activity)
+ssep <- separate(sgat, stat_feature, c("stat", "feature"))
 
-write.table("./tidy.txt", row.name=FALSE)
+mat <- tbl_df(data.frame(matrix(1:561, nrow=1, ncol=561)))
+colnames(mat) <- features
+mat <- select(mat, contains("mean()"))
+f <- colnames(mat)
+f <- strsplit(f, "-mean")
+f <- lapply(f, function(x) {
+     x <- x[[1]]
+})
+map2 <- function(i) {
+     i <- f[[i]]
+}
+ssep$feature <- lapply(as.numeric(ssep$feature), map2)
+ssep <- tbl_df(ssep)
+ssep$feature <- as.character(ssep$feature)
+write.table(ssep, file = "./tidy.txt", row.names=FALSE)
